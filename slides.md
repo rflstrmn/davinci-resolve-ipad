@@ -21,9 +21,9 @@ class: cover-slide
 
 # DaVinci Resolve<br><span class="accent">for iPad</span>
 
-Workshop · Videoschnitt am iPad
+Workshop · Videoschnitt und Color Grading am iPad
 
-<div class="meta">Rafael Starman · TODO Datum</div>
+<div class="meta">Rafael Starman · 17.10.2026</div>
 
 <!--
 Notizen: Begrüßung, kurz vorstellen, Ablauf des Workshops.

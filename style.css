@@ -67,11 +67,3 @@
   text-decoration: none !important; border: none !important;
 }
 .link-button:active { transform: scale(0.97); }
-
-/* Tap-Navigation fürs iPad */
-.tap-nav { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 8px; z-index: 10; }
-.tap-nav button {
-  width: 48px; height: 48px; border-radius: 50%; font-size: 1.75rem; line-height: 1;
-  background: rgba(255, 255, 255, 0.08); color: var(--dr-muted);
-}
-.tap-nav button:active { background: rgba(255, 255, 255, 0.2); }

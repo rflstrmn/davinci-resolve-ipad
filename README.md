@@ -14,10 +14,16 @@ npm run export     # PDF (benötigt einmalig: npm i -D playwright-chromium)
 
 Jeder Push auf `main` baut und veröffentlicht die Folien automatisch über GitHub Pages.
 
+## Lokal öffnen (Mac)
+
+Doppelklick auf **`Praesentation starten.command`** – startet die Präsentation und öffnet sie im Browser
+(http://localhost:3030). Funktioniert auch ohne Internet. Beenden: Terminal-Fenster schließen.
+Das iPad kann im selben WLAN über `http://<Mac-IP>:3030` mitschauen (die Adresse steht im Terminal).
+
 ## Am iPad präsentieren
 
 1. Live-URL in Safari öffnen → Teilen → **Zum Home-Bildschirm** (läuft dann im Vollbild wie eine App).
-2. Blättern: wischen oder die ‹ › Buttons unten rechts.
+2. Blättern: wischen.
 3. Zu DaVinci Resolve wechseln per Dock / App-Umschalter – die aktuelle Folie bleibt erhalten (Foliennummer steht in der URL).
 
 ## Dateien
@@ -25,7 +31,6 @@ Jeder Push auf `main` baut und veröffentlicht die Folien automatisch über GitH
 - `slides.md` – alle Folien (neue Folie mit `---`)
 - `style.css` – Resolve-Dark-Look
 - `components/LinkButton.vue` – Button für externe Links (`<LinkButton href="…">Text</LinkButton>`)
-- `global-bottom.vue` – Tap-Navigation
 - `public/images/` – Screenshots, im Markdown als `/images/datei.png` einbinden
 
 ## Synology Drive
