@@ -1,0 +1,77 @@
+/* DaVinci-Resolve-inspirierter Dark-Look */
+:root {
+  --dr-bg: #1b1b1d;
+  --dr-panel: #28282b;
+  --dr-border: #3a3a3e;
+  --dr-text: #e6e6e6;
+  --dr-muted: #9a9aa0;
+  --dr-accent: #e64b3c;
+  --dr-blue: #3d8bfd;
+  --dr-green: #4cc38a;
+  --dr-yellow: #f2c94c;
+  --dr-red: #e64b3c;
+}
+
+.slidev-layout {
+  background: var(--dr-bg);
+  color: var(--dr-text);
+  font-size: 1.25rem;
+}
+
+.slidev-layout h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-left: 6px solid var(--dr-accent);
+  padding-left: 0.75rem;
+}
+
+.slidev-layout strong { color: #fff; }
+.accent { color: var(--dr-accent); }
+
+/* Cover */
+.cover-slide.slidev-layout { background: radial-gradient(circle at 30% 30%, #2a2a2e, var(--dr-bg) 70%); }
+.cover-slide h1 { border: none; padding: 0; font-size: 3.5rem; line-height: 1.1; }
+.cover-slide .meta { margin-top: 2rem; color: var(--dr-muted); font-size: 1rem; }
+.resolve-stripes { display: flex; gap: 6px; margin-bottom: 1.5rem; }
+.resolve-stripes span { width: 48px; height: 6px; border-radius: 3px; }
+.resolve-stripes span:nth-child(1) { background: var(--dr-blue); }
+.resolve-stripes span:nth-child(2) { background: var(--dr-green); }
+.resolve-stripes span:nth-child(3) { background: var(--dr-yellow); }
+.resolve-stripes span:nth-child(4) { background: var(--dr-red); }
+
+/* Tabellen */
+.slidev-layout table { width: 100%; font-size: 1rem; }
+.slidev-layout th, .slidev-layout td { border-color: var(--dr-border); padding: 0.5rem 0.75rem; }
+.slidev-layout thead { background: var(--dr-panel); }
+
+/* Vergleichs-Karten */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.card { background: var(--dr-panel); border: 1px solid var(--dr-border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+.card h3 { margin: 0 0 0.75rem; font-size: 1.4rem; font-weight: 700; }
+.card ul { margin: 0; }
+.card-studio { border-color: var(--dr-accent); box-shadow: 0 0 0 1px var(--dr-accent) inset; }
+.card-studio h3 { color: var(--dr-accent); }
+.card .price { float: right; color: var(--dr-muted); font-size: 1rem; font-weight: 400; }
+
+/* Screenshots */
+.screenshot { border-radius: 10px; border: 1px solid var(--dr-border); }
+.screenshot-placeholder {
+  height: 100%; min-height: 300px; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; justify-content: center; text-align: center;
+  border: 2px dashed var(--dr-border); border-radius: 10px; color: var(--dr-muted); font-size: 1rem;
+}
+
+/* Touch-freundlicher Link-Button */
+.link-button {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 48px; padding: 0.6rem 1.4rem;
+  background: var(--dr-accent); color: #fff !important; border-radius: 999px; font-weight: 600;
+  text-decoration: none !important; border: none !important;
+}
+.link-button:active { transform: scale(0.97); }
+
+/* Tap-Navigation fürs iPad */
+.tap-nav { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 8px; z-index: 10; }
+.tap-nav button {
+  width: 48px; height: 48px; border-radius: 50%; font-size: 1.75rem; line-height: 1;
+  background: rgba(255, 255, 255, 0.08); color: var(--dr-muted);
+}
+.tap-nav button:active { background: rgba(255, 255, 255, 0.2); }
