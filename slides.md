@@ -21,7 +21,7 @@ class: cover-slide
 
 # DaVinci Resolve<br><span class="accent">for iPad</span>
 
-Workshop · Videoschnitt und Color Grading am iPad
+Videoschnitt und Color Grading am iPad
 
 <div class="meta">Rafael Starman · 17.10.2026</div>
 
@@ -36,8 +36,8 @@ layoutClass: gap-10
 
 # Was ist Blackmagic Design?
 
-- 🎥 **Kameras** – TODO
-- 🎛️ **Live-Produktion (ATEM)** – TODO
+- 🎥 **Kameras**
+- 🎛️ **Live-Produktion (ATEM)**
 - 🎬 **DaVinci Resolve** – TODO
 - 🎚️ **Hardware-Panels** – TODO
 
@@ -47,16 +47,14 @@ layoutClass: gap-10
 
 ::right::
 
-<div class="screenshot-placeholder">
-  Screenshot der Blackmagic-Webseite<br>
-  <code>public/images/blackmagic.png</code>
-</div>
+<a href="https://www.blackmagicdesign.com/" target="_blank" rel="noopener">
+  <img src="/images/blackmagic.jpg" class="screenshot" alt="Webseite von Blackmagic Design">
+</a>
 
 <!--
 Notizen: Die Webseite lässt sich nicht einbetten (Blackmagic verbietet iframes).
 Button öffnet sie in einem neuen Safari-Tab – danach zurück zum Folien-Tab.
-Screenshot ersetzen: Bild nach public/images/ legen und das Platzhalter-div durch
-<img src="/images/blackmagic.png" class="screenshot"> ersetzen.
+Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 -->
 
 ---
