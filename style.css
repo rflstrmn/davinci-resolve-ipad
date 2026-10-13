@@ -117,6 +117,8 @@
 .phase1.slidev-vclick-target { transition: opacity 1.2s ease; }
 .phase1.slidev-vclick-hidden .ipad-origin { opacity: 0 !important; animation: none !important; }
 .phase2.slidev-vclick-target { transition: none; }
+.phase2.slidev-vclick-hidden { transition: opacity 1.2s ease; }
+.phase2.slidev-vclick-hidden :is(.fly-icon, .fly-label) { opacity: 0 !important; animation: none !important; }
 .phase2:not(.slidev-vclick-hidden) .fly-icon  { animation: fly-icon 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
 .phase2:not(.slidev-vclick-hidden) .fly-label { animation: fly-label 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
 /* Startpunkt = Position von Icon/Beschriftung in der iPad-Spalte (Folienkoordinaten) */
@@ -127,3 +129,23 @@
 .tree-root-icon { display: block; width: 96px; height: 96px; color: var(--dr-accent); }
 .studio .platform-label { color: var(--dr-accent); }
 .platform-label .price { display: block; font-size: 0.9rem; font-weight: 400; color: var(--dr-muted); }
+
+/* Folie 3, Klick 3: iPad fliegt zurück, Rest blendet ein, dann ≠ und neue Listen */
+.phase3.slidev-vclick-target { transition: none; }
+.phase3:not(.slidev-vclick-hidden) .p3-fade { animation: fade-from-0 1.2s ease 0.4s both; }
+@keyframes fade-from-0 { from { opacity: 0; } to { opacity: 1; } }
+.phase3:not(.slidev-vclick-hidden) .fly-back-icon  { animation: fly-back-icon 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
+.phase3:not(.slidev-vclick-hidden) .fly-back-label { animation: fly-back-label 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
+@keyframes fly-back-icon  { from { transform: translate(calc(-1 * var(--fly-icon-x)), calc(-1 * var(--fly-icon-y))) scale(1.091); } }
+@keyframes fly-back-label { from { transform: translate(calc(-1 * var(--fly-label-x)), calc(-1 * var(--fly-label-y))) scale(2.143); } }
+.phase3 { --fly-icon-x: 238px; --fly-icon-y: 280px; --fly-label-x: 239px; --fly-label-y: 269px; }
+.fly-back-icon, .fly-back-label { transform-origin: center; }
+.phase3:not(.slidev-vclick-hidden) .neq { animation: pop-in 0.5s cubic-bezier(.3,1.6,.6,1) 2s both; }
+.phase3:not(.slidev-vclick-hidden) .left li  { animation: slide-in 0.35s ease-out both; animation-delay: calc(2.5s + var(--i, 0) * 0.25s); }
+.phase3:not(.slidev-vclick-hidden) .right li { animation: slide-in 0.35s ease-out both; animation-delay: calc(3.4s + var(--i, 0) * 0.25s); }
+.phase3 li:nth-child(2) { --i: 1; } .phase3 li:nth-child(3) { --i: 2; } .phase3 li:nth-child(4) { --i: 3; }
+.phase3 li:nth-child(5) { --i: 4; } .phase3 li:nth-child(6) { --i: 5; }
+.neq {
+  position: absolute; left: 0; right: 0; top: 112px; height: 88px;
+  display: flex; align-items: center; justify-content: center; font-size: 5rem; font-weight: 300; line-height: 1; color: var(--dr-text);
+}

@@ -109,8 +109,8 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 </div>
 
-<!-- Phase 2 (Klick 2): iPad-Icon fliegt nach oben, dann Kostenlos / Studio -->
-<div v-click="2" class="phase phase2">
+<!-- Phase 2 (Klick 2): iPad-Icon fliegt nach oben, dann Kostenlos / Studio. Klick 3 blendet aus. -->
+<div v-click="[2, 3]" class="phase phase2">
 
 <div class="flex flex-col items-center">
   <mdi-tablet-ipad class="tree-root-icon fly-icon" />
@@ -154,11 +154,54 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 </div>
 
+<!-- Phase 3 (Klick 3): iPad fliegt zurück, DaVinci Resolve Studio – Mac/PC ≠ iPad -->
+<div v-click="3" class="phase phase3">
+
+<div class="flex flex-col items-center p3-fade">
+  <img src="/images/davinci-resolve-logo.png" class="resolve-logo" alt="DaVinci Resolve Logo">
+  <h1 class="resolve-title">DaVinci Resolve <span class="accent">Studio</span></h1>
+</div>
+
+<div class="stage">
+<div class="stage-layer platforms tree-done">
+  <svg class="arrows p3-fade" viewBox="0 0 912 100">
+    <path class="arrow-line left" pathLength="1" d="M456 0 V34 H238 Q218 34 218 54 V86" />
+    <path class="arrow-head left" d="M208 84 L218 100 L228 84 Z" />
+    <path class="arrow-line right" pathLength="1" d="M456 0 V34 H674 Q694 34 694 54 V86" />
+    <path class="arrow-head right" d="M684 84 L694 100 L704 84 Z" />
+  </svg>
+  <div class="neq">≠</div>
+  <div class="grid grid-cols-2 gap-10">
+<div class="platform left">
+  <mdi-desktop-tower-monitor class="platform-icon p3-fade" />
+  <div class="platform-label p3-fade">Mac / PC</div>
+
+- TODO
+- TODO
+- TODO
+
+</div>
+<div class="platform right">
+  <mdi-tablet-ipad class="platform-icon fly-back-icon" />
+  <div class="platform-label fly-back-label">iPad</div>
+
+- TODO
+- TODO
+- TODO
+
+</div>
+  </div>
+</div>
+</div>
+
+</div>
+
 </div>
 
 <!--
 Notizen: Klick 1 – Foto weg, Mac/PC und iPad erscheinen.
 Klick 2 – iPad fliegt nach oben, Kostenlos vs. Studio.
+Klick 3 – iPad fliegt zurück: DaVinci Resolve Studio, Mac/PC ≠ iPad.
 Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Mask.
 -->
 
