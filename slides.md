@@ -58,16 +58,29 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 ---
 
-# DaVinci Resolve: PC/Mac vs. iPad
+<div class="flex flex-col items-center">
+  <div class="logo-placeholder">Logo</div>
+  <h1 class="resolve-title">DaVinci Resolve</h1>
+</div>
 
-| | PC / Mac | iPad |
-|---|---|---|
-| **Pages** | Media, Cut, Edit, Fusion, Color, Fairlight, Deliver | TODO |
-| **Bedienung** | Maus, Tastatur, Panels | TODO (Touch, Pencil, Tastatur) |
-| **Fusion (VFX)** | ✅ | TODO |
-| **Fairlight (Audio)** | ✅ | TODO |
-| **Projekt-Austausch** | TODO | TODO |
-| **Preis** | Free / Studio | TODO |
+<div v-click class="grid grid-cols-2 gap-10 mt-6">
+<div class="platform">
+  <mdi-desktop-tower-monitor class="platform-icon" />
+
+- Media, Cut, Edit, Fusion, Color, Fairlight, Deliver
+- Maus, Tastatur, Panels
+- TODO
+
+</div>
+<div class="platform">
+  <mdi-tablet-ipad class="platform-icon" />
+
+- TODO
+- Touch, Pencil, Tastatur
+- TODO
+
+</div>
+</div>
 
 <!--
 Notizen: TODO

@@ -68,3 +68,13 @@
 }
 .link-button:active { transform: scale(0.97); }
 .screenshot { display: block; width: 100%; max-height: 380px; object-fit: cover; object-position: top; }
+
+/* Folie 3: Plattform-Vergleich */
+.resolve-logo { width: 96px; height: 96px; }
+.logo-placeholder {
+  width: 96px; height: 96px; border-radius: 22px; border: 2px dashed var(--dr-border);
+  display: flex; align-items: center; justify-content: center; color: var(--dr-muted); font-size: 0.9rem;
+}
+.slidev-layout h1.resolve-title { border: none; padding: 0; margin-top: 0.75rem; font-size: 3rem; text-align: center; }
+.platform-icon { display: block; width: 72px; height: 72px; margin: 0 auto 0.75rem; color: var(--dr-accent); }
+.platform ul { font-size: 1.1rem; }
