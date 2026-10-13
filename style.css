@@ -44,15 +44,6 @@
 .slidev-layout th, .slidev-layout td { border-color: var(--dr-border); padding: 0.5rem 0.75rem; }
 .slidev-layout thead { background: var(--dr-panel); }
 
-/* Vergleichs-Karten */
-.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
-.card { background: var(--dr-panel); border: 1px solid var(--dr-border); border-radius: 12px; padding: 1.25rem 1.5rem; }
-.card h3 { margin: 0 0 0.75rem; font-size: 1.4rem; font-weight: 700; }
-.card ul { margin: 0; }
-.card-studio { border-color: var(--dr-accent); box-shadow: 0 0 0 1px var(--dr-accent) inset; }
-.card-studio h3 { color: var(--dr-accent); }
-.card .price { float: right; color: var(--dr-muted); font-size: 1rem; font-weight: 400; }
-
 /* Screenshots */
 .screenshot { border-radius: 10px; border: 1px solid var(--dr-border); }
 .screenshot-placeholder {
@@ -95,24 +86,34 @@
 .platforms .right { --arrow: 2.4s; --icon: 3s;   --list: 3.4s; }
 .arrows .left  { --arrow: 0s; }
 .arrows .right { --arrow: 2.4s; }
+/* Folie 4: erst nach dem Hereinfliegen des iPad-Icons starten */
+.platforms.delayed .left  { --arrow: 0.7s; --icon: 1.3s; --list: 1.7s; }
+.platforms.delayed .right { --arrow: 3.1s; --icon: 3.7s; --list: 4.1s; }
 
-.platforms:not(.slidev-vclick-hidden) .arrow-line { animation: draw 0.6s ease-out var(--arrow) forwards; }
-.platforms:not(.slidev-vclick-hidden) .arrow-head { animation: fade-in 0.15s var(--arrow) forwards; animation-delay: calc(var(--arrow) + 0.5s); }
-.platforms:not(.slidev-vclick-hidden) .platform-icon { animation: pop-in 0.4s cubic-bezier(.3,1.6,.6,1) var(--icon) forwards; }
-.platforms:not(.slidev-vclick-hidden) .platform-label { animation: fade-in 0.3s ease-out forwards; animation-delay: calc(var(--icon) + 0.2s); }
-.platforms:not(.slidev-vclick-hidden) li { animation: slide-in 0.35s ease-out forwards; }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(1) { animation-delay: var(--list); }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(2) { animation-delay: calc(var(--list) + 0.25s); }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(3) { animation-delay: calc(var(--list) + 0.5s); }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(4) { animation-delay: calc(var(--list) + 0.75s); }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(5) { animation-delay: calc(var(--list) + 1s); }
-.platforms:not(.slidev-vclick-hidden) li:nth-child(6) { animation-delay: calc(var(--list) + 1.25s); }
+.platforms.tree-run .arrow-line { animation: draw 0.6s ease-out var(--arrow) forwards; }
+.platforms.tree-run .arrow-head { animation: fade-in 0.15s var(--arrow) forwards; animation-delay: calc(var(--arrow) + 0.5s); }
+.platforms.tree-run .platform-icon { animation: pop-in 0.4s cubic-bezier(.3,1.6,.6,1) var(--icon) forwards; }
+.platforms.tree-run .platform-label { animation: fade-in 0.3s ease-out forwards; animation-delay: calc(var(--icon) + 0.2s); }
+.platforms.tree-run li { animation: slide-in 0.35s ease-out forwards; }
+.platforms.tree-run li:nth-child(1) { animation-delay: var(--list); }
+.platforms.tree-run li:nth-child(2) { animation-delay: calc(var(--list) + 0.25s); }
+.platforms.tree-run li:nth-child(3) { animation-delay: calc(var(--list) + 0.5s); }
+.platforms.tree-run li:nth-child(4) { animation-delay: calc(var(--list) + 0.75s); }
+.platforms.tree-run li:nth-child(5) { animation-delay: calc(var(--list) + 1s); }
+.platforms.tree-run li:nth-child(6) { animation-delay: calc(var(--list) + 1.25s); }
 
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes fade-in { to { opacity: 1; } }
 @keyframes pop-in { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: scale(1); } }
 @keyframes slide-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
-/* Export/Druck: alles sofort sichtbar */
-.print .platforms .arrow-line { stroke-dashoffset: 0; }
-.print .platforms .arrow-head, .print .platforms .platform-icon, .print .platforms .platform-label, .print .platforms li { opacity: 1; }
+/* Animation schon gelaufen (oder Übersicht/Export): Endzustand ohne Animation */
+.platforms.tree-done .arrow-line { stroke-dashoffset: 0; }
+.platforms.tree-done :is(.arrow-head, .platform-icon, .platform-label, li) { opacity: 1; }
+
+/* Folie 3 → 4: iPad-Icon und -Beschriftung wandern nach oben */
+.vt-ipad-icon { view-transition-name: ipad-icon; }
+.vt-ipad-label { view-transition-name: ipad-label; }
+.tree-root-icon { display: block; width: 96px; height: 96px; color: var(--dr-accent); }
+.studio .platform-label { color: var(--dr-accent); }
+.platform-label .price { display: block; font-size: 0.9rem; font-weight: 400; color: var(--dr-muted); }

@@ -57,6 +57,8 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 -->
 
 ---
+transition: view-transition
+---
 
 <div class="flex flex-col items-center">
   <img src="/images/davinci-resolve-logo.png" class="resolve-logo" alt="DaVinci Resolve Logo">
@@ -71,7 +73,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 </div>
 
 <!-- Nach dem Klick: läuft automatisch ab – links Pfeil → PC → Liste, dann rechts Pfeil → iPad → Liste -->
-<div v-click="1" class="stage-layer platforms">
+<TreeReveal :at="1" class="stage-layer platforms">
   <svg class="arrows" viewBox="0 0 912 100">
     <path class="arrow-line left" pathLength="1" d="M456 0 V34 H238 Q218 34 218 54 V86" />
     <path class="arrow-head left" d="M208 84 L218 100 L228 84 Z" />
@@ -89,8 +91,8 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 </div>
 <div class="platform right">
-  <mdi-tablet-ipad class="platform-icon" />
-  <div class="platform-label">iPad</div>
+  <mdi-tablet-ipad class="platform-icon vt-ipad-icon" />
+  <div class="platform-label vt-ipad-label">iPad</div>
 
 - TODO
 - Touch, Pencil, Tastatur
@@ -98,7 +100,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 </div>
   </div>
-</div>
+</TreeReveal>
 
 </div>
 
@@ -107,29 +109,45 @@ Notizen: TODO
 -->
 
 ---
-class: compare-slide
----
 
-# iPad: Kostenlos vs. Studio
+<div class="flex flex-col items-center">
+  <mdi-tablet-ipad class="tree-root-icon vt-ipad-icon" />
+  <h1 class="resolve-title vt-ipad-label">iPad</h1>
+</div>
 
-<div class="compare">
-  <div class="card">
-    <h3>Kostenlos</h3>
-    <ul>
-      <li>TODO</li>
-      <li>TODO</li>
-      <li>TODO</li>
-    </ul>
+<div class="stage">
+
+<!-- Läuft automatisch ab, sobald die Folie erscheint: links Kostenlos, dann rechts Studio -->
+<TreeReveal class="stage-layer platforms delayed">
+  <svg class="arrows" viewBox="0 0 912 100">
+    <path class="arrow-line left" pathLength="1" d="M456 0 V34 H238 Q218 34 218 54 V86" />
+    <path class="arrow-head left" d="M208 84 L218 100 L228 84 Z" />
+    <path class="arrow-line right" pathLength="1" d="M456 0 V34 H674 Q694 34 694 54 V86" />
+    <path class="arrow-head right" d="M684 84 L694 100 L704 84 Z" />
+  </svg>
+  <div class="grid grid-cols-2 gap-10">
+<div class="platform left">
+  <mdi-gift-outline class="platform-icon" />
+  <div class="platform-label">Kostenlos</div>
+
+- TODO
+- TODO
+- TODO
+
+</div>
+<div class="platform right studio">
+  <mdi-creation class="platform-icon" />
+  <div class="platform-label">Studio <span class="price">TODO €</span></div>
+
+- Magic Mask
+- Voice Isolation
+- Super Scale
+- TODO
+
+</div>
   </div>
-  <div class="card card-studio">
-    <h3>Studio <span class="price">TODO €</span></h3>
-    <ul>
-      <li>✨ Magic Mask</li>
-      <li>✨ Voice Isolation</li>
-      <li>✨ Super Scale</li>
-      <li>TODO</li>
-    </ul>
-  </div>
+</TreeReveal>
+
 </div>
 
 <!--
