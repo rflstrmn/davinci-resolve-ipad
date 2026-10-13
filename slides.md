@@ -57,8 +57,11 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 -->
 
 ---
-transition: view-transition
----
+
+<div class="phases">
+
+<!-- Phase 1 (Klick 0–1): DaVinci Resolve → Mac/PC und iPad. Klick 2 blendet alles langsam aus. -->
+<div v-click.hide="2" class="phase phase1">
 
 <div class="flex flex-col items-center">
   <img src="/images/davinci-resolve-logo.png" class="resolve-logo" alt="DaVinci Resolve Logo">
@@ -91,8 +94,8 @@ transition: view-transition
 
 </div>
 <div class="platform right">
-  <mdi-tablet-ipad class="platform-icon vt-ipad-icon" />
-  <div class="platform-label vt-ipad-label">iPad</div>
+  <mdi-tablet-ipad class="platform-icon ipad-origin" />
+  <div class="platform-label ipad-origin">iPad</div>
 
 - TODO
 - Touch, Pencil, Tastatur
@@ -104,21 +107,20 @@ transition: view-transition
 
 </div>
 
-<!--
-Notizen: TODO
--->
+</div>
 
----
+<!-- Phase 2 (Klick 2): iPad-Icon fliegt nach oben, dann Kostenlos / Studio -->
+<div v-click="2" class="phase phase2">
 
 <div class="flex flex-col items-center">
-  <mdi-tablet-ipad class="tree-root-icon vt-ipad-icon" />
-  <h1 class="resolve-title vt-ipad-label">iPad</h1>
+  <mdi-tablet-ipad class="tree-root-icon fly-icon" />
+  <h1 class="resolve-title fly-label">iPad</h1>
 </div>
 
 <div class="stage">
 
-<!-- Läuft automatisch ab, sobald die Folie erscheint: links Kostenlos, dann rechts Studio -->
-<TreeReveal class="stage-layer platforms delayed">
+<!-- Nach dem Flug automatisch: links Kostenlos, dann rechts Studio -->
+<TreeReveal :at="2" :duration="8000" class="stage-layer platforms after-fly">
   <svg class="arrows" viewBox="0 0 912 100">
     <path class="arrow-line left" pathLength="1" d="M456 0 V34 H238 Q218 34 218 54 V86" />
     <path class="arrow-head left" d="M208 84 L218 100 L228 84 Z" />
@@ -150,8 +152,14 @@ Notizen: TODO
 
 </div>
 
+</div>
+
+</div>
+
 <!--
-Notizen: Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Mask.
+Notizen: Klick 1 – Foto weg, Mac/PC und iPad erscheinen.
+Klick 2 – iPad fliegt nach oben, Kostenlos vs. Studio.
+Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Mask.
 -->
 
 ---

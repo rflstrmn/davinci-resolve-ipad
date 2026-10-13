@@ -86,9 +86,9 @@
 .platforms .right { --arrow: 2.4s; --icon: 3s;   --list: 3.4s; }
 .arrows .left  { --arrow: 0s; }
 .arrows .right { --arrow: 2.4s; }
-/* Folie 4: erst nach dem Hereinfliegen des iPad-Icons starten */
-.platforms.delayed .left  { --arrow: 0.7s; --icon: 1.3s; --list: 1.7s; }
-.platforms.delayed .right { --arrow: 3.1s; --icon: 3.7s; --list: 4.1s; }
+/* Phase 2: erst nach dem Flug des iPad-Icons starten */
+.platforms.after-fly .left  { --arrow: 2.2s; --icon: 2.8s; --list: 3.2s; }
+.platforms.after-fly .right { --arrow: 4.6s; --icon: 5.2s; --list: 5.6s; }
 
 .platforms.tree-run .arrow-line { animation: draw 0.6s ease-out var(--arrow) forwards; }
 .platforms.tree-run .arrow-head { animation: fade-in 0.15s var(--arrow) forwards; animation-delay: calc(var(--arrow) + 0.5s); }
@@ -111,9 +111,19 @@
 .platforms.tree-done .arrow-line { stroke-dashoffset: 0; }
 .platforms.tree-done :is(.arrow-head, .platform-icon, .platform-label, li) { opacity: 1; }
 
-/* Folie 3 → 4: iPad-Icon und -Beschriftung wandern nach oben */
-.vt-ipad-icon { view-transition-name: ipad-icon; }
-.vt-ipad-label { view-transition-name: ipad-label; }
+/* Folie 3, Klick 2: alles blendet langsam aus, das iPad-Icon fliegt nach oben in die Mitte */
+.phases { position: relative; height: 100%; }
+.phase { position: absolute; inset: 0; }
+.phase1.slidev-vclick-target { transition: opacity 1.2s ease; }
+.phase1.slidev-vclick-hidden .ipad-origin { opacity: 0 !important; animation: none !important; }
+.phase2.slidev-vclick-target { transition: none; }
+.phase2:not(.slidev-vclick-hidden) .fly-icon  { animation: fly-icon 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
+.phase2:not(.slidev-vclick-hidden) .fly-label { animation: fly-label 1.6s cubic-bezier(.65,0,.35,1) 0.3s both; }
+/* Startpunkt = Position von Icon/Beschriftung in der iPad-Spalte (Folienkoordinaten) */
+@keyframes fly-icon  { from { transform: translate(var(--fly-icon-x), var(--fly-icon-y)) scale(0.917); } }
+@keyframes fly-label { from { transform: translate(var(--fly-label-x), var(--fly-label-y)) scale(0.467); } }
+.phase2 { --fly-icon-x: 238px; --fly-icon-y: 280px; --fly-label-x: 239px; --fly-label-y: 269px; }
+.fly-icon, .fly-label { transform-origin: center; }
 .tree-root-icon { display: block; width: 96px; height: 96px; color: var(--dr-accent); }
 .studio .platform-label { color: var(--dr-accent); }
 .platform-label .price { display: block; font-size: 0.9rem; font-weight: 400; color: var(--dr-muted); }
