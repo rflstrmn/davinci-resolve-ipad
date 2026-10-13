@@ -36,10 +36,10 @@ Notizen: Begrüßung, kurz vorstellen, Ablauf des Workshops.
 <div class="grid grid-cols-2 gap-10 items-center mt-6">
 <div>
 
-- 🎥 **Kameras**
-- 🎛️ **Live-Produktion (ATEM)**
-- 🎬 **DaVinci Resolve**
-- 🎚️ **Hardware-Panels**
+- **Kameras**
+- **Live-Produktion (ATEM)**
+- **DaVinci Resolve**
+- **Hardware-Panels**
 
 </div>
 <div class="flex flex-col items-center gap-6">
