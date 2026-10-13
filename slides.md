@@ -67,10 +67,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 <!-- Startansicht: Foto vom alten DaVinci Resolve, verschwindet beim Klick -->
 <div v-click.hide="1" class="stage-layer flex justify-center">
-  <div class="screenshot-placeholder w-full">
-    Foto: altes DaVinci Resolve<br>
-    <code>public/images/davinci-resolve-alt.jpg</code>
-  </div>
+  <img src="/images/hero-lg.jpg" class="stage-photo" alt="DaVinci Resolve am Schnittplatz mit Monitoren und Panels">
 </div>
 
 <!-- Nach dem Klick: läuft automatisch ab – links Pfeil → PC → Liste, dann rechts Pfeil → iPad → Liste -->
