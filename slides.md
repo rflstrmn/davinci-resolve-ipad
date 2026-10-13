@@ -30,26 +30,25 @@ Notizen: Begrüßung, kurz vorstellen, Ablauf des Workshops.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-10
----
 
 # Was ist Blackmagic Design?
 
+<div class="grid grid-cols-2 gap-10 items-center mt-6">
+<div>
+
 - 🎥 **Kameras**
 - 🎛️ **Live-Produktion (ATEM)**
-- 🎬 **DaVinci Resolve** – TODO
-- 🎚️ **Hardware-Panels** – TODO
+- 🎬 **DaVinci Resolve**
+- 🎚️ **Hardware-Panels**
 
-<div class="mt-8">
+</div>
+<div class="flex flex-col items-center gap-6">
+  <a href="https://www.blackmagicdesign.com/" target="_blank" rel="noopener">
+    <img src="/images/blackmagic.jpg" class="screenshot" alt="Webseite von Blackmagic Design">
+  </a>
   <LinkButton href="https://www.blackmagicdesign.com/">Webseite öffnen</LinkButton>
 </div>
-
-::right::
-
-<a href="https://www.blackmagicdesign.com/" target="_blank" rel="noopener">
-  <img src="/images/blackmagic.jpg" class="screenshot" alt="Webseite von Blackmagic Design">
-</a>
+</div>
 
 <!--
 Notizen: Die Webseite lässt sich nicht einbetten (Blackmagic verbietet iframes).
