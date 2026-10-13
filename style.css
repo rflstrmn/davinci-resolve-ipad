@@ -72,20 +72,23 @@
 /* Folie 3: Plattform-Vergleich */
 .resolve-logo { width: 96px; height: 96px; }
 .slidev-layout h1.resolve-title { border: none; padding: 0; margin-top: 0.5rem; font-size: 3rem; text-align: center; }
-.stage { position: relative; height: 440px; margin-top: 0.5rem; }
+.stage { position: relative; height: 470px; margin-top: 0.75rem; }
 .stage-layer { position: absolute; inset: 0; }
 .stage .screenshot-placeholder { min-height: 0; height: 100%; }
 .stage-photo { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; border: 1px solid var(--dr-border); }
 
-.arrows { display: block; width: 100%; height: 70px; overflow: visible; }
-.arrows path { fill: none; stroke: var(--dr-muted); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.arrows { display: block; width: 100%; height: 100px; overflow: visible; }
+.arrow-line { fill: none; stroke: var(--dr-muted); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.arrow-head { fill: var(--dr-muted); }
 .arrow-line { stroke-dasharray: 1; stroke-dashoffset: 1; }
 .arrow-head { opacity: 0; }
 
 .platform { text-align: center; }
-.platform ul { display: inline-block; text-align: left; font-size: 1.1rem; margin-top: 0.25rem; }
-.platform-icon { display: block; width: 80px; height: 80px; margin: 0.25rem auto 0.5rem; color: var(--dr-accent); }
-.platforms .platform-icon, .platforms li { opacity: 0; }
+.platform ul { display: inline-block; text-align: left; font-size: 1.15rem; margin-top: 1.25rem; }
+.platform li { margin: 0.5rem 0; }
+.platform-label { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.02em; }
+.platform-icon { display: block; width: 88px; height: 88px; margin: 0.75rem auto 0.25rem; color: var(--dr-accent); }
+.platforms .platform-icon, .platforms .platform-label, .platforms li { opacity: 0; }
 
 /* Zeitplan der Animation (Sekunden nach dem Klick) */
 .platforms .left  { --arrow: 0s;   --icon: 0.6s; --list: 1s; }
@@ -96,6 +99,7 @@
 .platforms:not(.slidev-vclick-hidden) .arrow-line { animation: draw 0.6s ease-out var(--arrow) forwards; }
 .platforms:not(.slidev-vclick-hidden) .arrow-head { animation: fade-in 0.15s var(--arrow) forwards; animation-delay: calc(var(--arrow) + 0.5s); }
 .platforms:not(.slidev-vclick-hidden) .platform-icon { animation: pop-in 0.4s cubic-bezier(.3,1.6,.6,1) var(--icon) forwards; }
+.platforms:not(.slidev-vclick-hidden) .platform-label { animation: fade-in 0.3s ease-out forwards; animation-delay: calc(var(--icon) + 0.2s); }
 .platforms:not(.slidev-vclick-hidden) li { animation: slide-in 0.35s ease-out forwards; }
 .platforms:not(.slidev-vclick-hidden) li:nth-child(1) { animation-delay: var(--list); }
 .platforms:not(.slidev-vclick-hidden) li:nth-child(2) { animation-delay: calc(var(--list) + 0.25s); }
@@ -111,4 +115,4 @@
 
 /* Export/Druck: alles sofort sichtbar */
 .print .platforms .arrow-line { stroke-dashoffset: 0; }
-.print .platforms .arrow-head, .print .platforms .platform-icon, .print .platforms li { opacity: 1; }
+.print .platforms .arrow-head, .print .platforms .platform-icon, .print .platforms .platform-label, .print .platforms li { opacity: 1; }

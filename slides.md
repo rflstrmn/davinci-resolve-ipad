@@ -72,15 +72,16 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 
 <!-- Nach dem Klick: läuft automatisch ab – links Pfeil → PC → Liste, dann rechts Pfeil → iPad → Liste -->
 <div v-click="1" class="stage-layer platforms">
-  <svg class="arrows" viewBox="0 0 912 70">
-    <path class="arrow-line left" pathLength="1" d="M456 0 C 456 45, 218 20, 218 58" />
-    <path class="arrow-head left" d="M210 50 L218 62 L226 50" />
-    <path class="arrow-line right" pathLength="1" d="M456 0 C 456 45, 694 20, 694 58" />
-    <path class="arrow-head right" d="M686 50 L694 62 L702 50" />
+  <svg class="arrows" viewBox="0 0 912 100">
+    <path class="arrow-line left" pathLength="1" d="M456 0 V34 H238 Q218 34 218 54 V86" />
+    <path class="arrow-head left" d="M208 84 L218 100 L228 84 Z" />
+    <path class="arrow-line right" pathLength="1" d="M456 0 V34 H674 Q694 34 694 54 V86" />
+    <path class="arrow-head right" d="M684 84 L694 100 L704 84 Z" />
   </svg>
   <div class="grid grid-cols-2 gap-10">
 <div class="platform left">
   <mdi-desktop-tower-monitor class="platform-icon" />
+  <div class="platform-label">Mac / PC</div>
 
 - Media, Cut, Edit, Fusion, Color, Fairlight, Deliver
 - Maus, Tastatur, Panels
@@ -89,6 +90,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 </div>
 <div class="platform right">
   <mdi-tablet-ipad class="platform-icon" />
+  <div class="platform-label">iPad</div>
 
 - TODO
 - Touch, Pencil, Tastatur
