@@ -59,12 +59,30 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 ---
 
 <div class="flex flex-col items-center">
-  <div class="logo-placeholder">Logo</div>
+  <img src="/images/davinci-resolve-logo.png" class="resolve-logo" alt="DaVinci Resolve Logo">
   <h1 class="resolve-title">DaVinci Resolve</h1>
 </div>
 
-<div v-click class="grid grid-cols-2 gap-10 mt-6">
-<div class="platform">
+<div class="stage">
+
+<!-- Startansicht: Foto vom alten DaVinci Resolve, verschwindet beim Klick -->
+<div v-click.hide="1" class="stage-layer flex justify-center">
+  <div class="screenshot-placeholder w-full">
+    Foto: altes DaVinci Resolve<br>
+    <code>public/images/davinci-resolve-alt.jpg</code>
+  </div>
+</div>
+
+<!-- Nach dem Klick: läuft automatisch ab – links Pfeil → PC → Liste, dann rechts Pfeil → iPad → Liste -->
+<div v-click="1" class="stage-layer platforms">
+  <svg class="arrows" viewBox="0 0 912 70">
+    <path class="arrow-line left" pathLength="1" d="M456 0 C 456 45, 218 20, 218 58" />
+    <path class="arrow-head left" d="M210 50 L218 62 L226 50" />
+    <path class="arrow-line right" pathLength="1" d="M456 0 C 456 45, 694 20, 694 58" />
+    <path class="arrow-head right" d="M686 50 L694 62 L702 50" />
+  </svg>
+  <div class="grid grid-cols-2 gap-10">
+<div class="platform left">
   <mdi-desktop-tower-monitor class="platform-icon" />
 
 - Media, Cut, Edit, Fusion, Color, Fairlight, Deliver
@@ -72,7 +90,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 - TODO
 
 </div>
-<div class="platform">
+<div class="platform right">
   <mdi-tablet-ipad class="platform-icon" />
 
 - TODO
@@ -80,6 +98,9 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 - TODO
 
 </div>
+  </div>
+</div>
+
 </div>
 
 <!--
