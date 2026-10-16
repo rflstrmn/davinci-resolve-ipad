@@ -88,18 +88,14 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
   <mdi-desktop-tower-monitor class="platform-icon" />
   <div class="platform-label">Mac / PC</div>
 
-- Media, Cut, Edit, Fusion, Color, Fairlight, Deliver
-- Maus, Tastatur, Panels
-- TODO
+- Mehr "Pages": Media, Cut, Edit, Fusion, Color, Fairlight, Deliver
 
 </div>
 <div class="platform right">
   <mdi-tablet-ipad class="platform-icon ipad-origin" />
   <div class="platform-label ipad-origin">iPad</div>
 
-- TODO
-- Touch, Pencil, Tastatur
-- TODO
+- Nur Cut und Color Page
 
 </div>
   </div>
@@ -132,19 +128,15 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
   <mdi-gift-outline class="platform-icon" />
   <div class="platform-label">Kostenlos</div>
 
-- TODO
-- TODO
-- TODO
-
 </div>
 <div class="platform right studio">
   <mdi-creation class="platform-icon" />
-  <div class="platform-label">Studio <span class="price">TODO €</span></div>
+  <div class="platform-label">Studio <span class="price">129,- €</span></div>
 
-- Magic Mask
-- Voice Isolation
-- Super Scale
-- TODO
++ KI Tools
++ Magic Mask
++ Voice Isolation
++ Super Scale
 
 </div>
   </div>
@@ -176,18 +168,12 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
   <mdi-desktop-tower-monitor class="platform-icon p3-fade" />
   <div class="platform-label p3-fade">Mac / PC</div>
 
-- TODO
-- TODO
-- TODO
 
 </div>
 <div class="platform right">
   <mdi-tablet-ipad class="platform-icon fly-back-icon" />
   <div class="platform-label fly-back-label">iPad</div>
 
-- TODO
-- TODO
-- TODO
 
 </div>
   </div>
@@ -203,6 +189,52 @@ Notizen: Klick 1 – Foto weg, Mac/PC und iPad erscheinen.
 Klick 2 – iPad fliegt nach oben, Kostenlos vs. Studio.
 Klick 3 – iPad fliegt zurück: DaVinci Resolve Studio, Mac/PC ≠ iPad.
 Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Mask.
+-->
+
+---
+
+# Übersicht
+
+<div class="overview">
+  <div></div>
+  <div class="ov-col"><mdi-tablet-ipad class="ov-icon" />iPad</div>
+  <div class="ov-col"><mdi-desktop-tower-monitor class="ov-icon" />Mac / PC</div>
+
+  <div class="ov-row"><img src="/images/davinci-resolve-logo.png" class="ov-logo" alt=""><span>DaVinci Resolve</span></div>
+  <div class="ov-cell">
+    <div class="ov-price">TODO</div>
+    <ul>
+      <li>TODO</li>
+      <li>TODO</li>
+    </ul>
+  </div>
+  <div class="ov-cell">
+    <div class="ov-price">TODO</div>
+    <ul>
+      <li>TODO</li>
+      <li>TODO</li>
+    </ul>
+  </div>
+
+  <div class="ov-row"><img src="/images/davinci-resolve-logo.png" class="ov-logo" alt=""><span>DaVinci Resolve<br><span class="accent">Studio</span></span></div>
+  <div class="ov-cell ov-studio">
+    <div class="ov-price">TODO</div>
+    <ul>
+      <li>TODO</li>
+      <li>TODO</li>
+    </ul>
+  </div>
+  <div class="ov-cell ov-studio">
+    <div class="ov-price">TODO</div>
+    <ul>
+      <li>TODO</li>
+      <li>TODO</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Notizen: Zusammenfassung – welche Version auf welchem Gerät, was kostet sie, was kann sie.
 -->
 
 ---
