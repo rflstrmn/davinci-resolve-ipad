@@ -169,5 +169,8 @@
 .ov-studio { border-color: var(--dr-accent); }
 .ov-price { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
 .ov-studio .ov-price { color: var(--dr-accent); }
-.ov-cell ul { margin: 0; }
+.slidev-layout .ov-cell ul { margin: 0; padding-left: 0; list-style-position: inside; }
+/* Zelle nur mit Preis (z. B. KOSTENLOS): mittig/mittig */
+.ov-cell:not(:has(li)) { display: flex; align-items: center; justify-content: center; }
+.ov-cell:not(:has(li)) .ov-price { margin: 0; }
 .ov-cell li { margin: 0.25rem 0; }

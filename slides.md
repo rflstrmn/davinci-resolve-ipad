@@ -211,11 +211,12 @@ Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Ma
 
   <div class="ov-row"><img src="/images/davinci-resolve-logo.png" class="ov-logo" alt=""><span>DaVinci Resolve<br><span class="accent">Studio</span></span></div>
   <div class="ov-cell ov-studio">
-    <div class="ov-price">129.- €</div>
+    <div class="ov-price">99,99 €</div>
   </div>
   <div class="ov-cell ov-studio">
-    <div class="ov-price">236.- €</div>
+    <div class="ov-price">305.- € €</div>
     <ul>
+    <li>Einmalig, kein Abo</li>
     <li>zwei Rechner</li>
     </ul>
   </div>
