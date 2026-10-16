@@ -95,7 +95,7 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
   <mdi-tablet-ipad class="platform-icon ipad-origin" />
   <div class="platform-label ipad-origin">iPad</div>
 
-- Nur Cut und Color Page
+- Photo, Cut, Color und Delivery Page
 
 </div>
   </div>
@@ -224,6 +224,46 @@ Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Ma
 
 <!--
 Notizen: Zusammenfassung – welche Version auf welchem Gerät, was kostet sie, was kann sie.
+-->
+
+---
+layout: full
+---
+
+<!-- Startfenster am iPad: erst Vollbild, Klick 1 → Bild wird kleiner, Bereiche werden nacheinander erklärt -->
+<div class="ui-tour" :class="{ small: $clicks >= 1 }">
+  <div class="shot">
+    <img src="/images/DVR_Start.png" alt="Startfenster von DaVinci Resolve am iPad">
+    <div v-click="1" class="regions">
+      <div class="region" style="left:0%;top:0%;width:100%;height:4.87%;--i:0"></div>
+      <div class="region" style="left:0%;top:4.87%;width:32%;height:52.830000000000005%;--i:1"></div>
+      <div class="region" style="left:32%;top:4.87%;width:63.25%;height:52.830000000000005%;--i:2"></div>
+      <div class="region" style="left:95.25%;top:4.87%;width:4.75%;height:52.830000000000005%;--i:3"></div>
+      <div class="region" style="left:0%;top:57.7%;width:100%;height:5.299999999999997%;--i:4"></div>
+      <div class="region" style="left:0%;top:63.0%;width:100%;height:32.599999999999994%;--i:5"></div>
+      <div class="region" style="left:0%;top:95.6%;width:100%;height:4.400000000000006%;--i:6"></div>
+    </div>
+  </div>
+  <svg class="ui-arrows" viewBox="0 0 1024 768">
+    <g style="--i:0"><path class="ui-arrow" pathLength="1" d="M512 198 V154" /><path class="ui-head" d="M506 164 L512 154 L518 164" /></g>
+    <g style="--i:1"><path class="ui-arrow" pathLength="1" d="M322 325 L218 325" /><path class="ui-head" d="M228 319 L218 325 L228 331" /></g>
+    <g style="--i:2"><path class="ui-arrow" pathLength="1" d="M624 286 V259 H806" /><path class="ui-head" d="M796 253 L806 259 L796 265" /></g>
+    <g style="--i:3"><path class="ui-arrow" pathLength="1" d="M779 384 V376 H806" /><path class="ui-head" d="M796 370 L806 376 L796 382" /></g>
+    <g style="--i:4"><path class="ui-arrow" pathLength="1" d="M322 424 L218 424" /><path class="ui-head" d="M228 418 L218 424 L228 430" /></g>
+    <g style="--i:5"><path class="ui-arrow" pathLength="1" d="M288 501 L218 501" /><path class="ui-head" d="M228 495 L218 501 L228 507" /></g>
+    <g style="--i:6"><path class="ui-arrow" pathLength="1" d="M512 571 V614" /><path class="ui-head" d="M506 604 L512 614 L518 604" /></g>
+  </svg>
+  <div class="ui-label" style="left:50%;bottom:620px;transform:translateX(-50%);text-align:center;width:520px;--i:0"><b>Menüleiste</b><span>Medien, Übergänge, Titel, Effekte, Keyframes – rechts Exportieren, Mixer, Inspektor</span></div>
+  <div class="ui-label" style="right:814px;top:325px;transform:translateY(-50%);text-align:right;--i:1"><b>Media Pool</b><span>Alle importierten Clips, Fotos und Audiodateien</span></div>
+  <div class="ui-label" style="left:814px;top:259px;transform:translateY(-50%);--i:2"><b>Viewer</b><span>Vorschau von Clip bzw. Timeline</span></div>
+  <div class="ui-label" style="left:814px;top:376px;transform:translateY(-50%);--i:3"><b>Audiopegel</b><span>Lautstärke-Anzeige</span></div>
+  <div class="ui-label" style="right:814px;top:424px;transform:translateY(-50%);text-align:right;--i:4"><b>Werkzeug- & Transportleiste</b><span>Schnittwerkzeuge, Wiedergabe, Timecode</span></div>
+  <div class="ui-label" style="right:814px;top:501px;transform:translateY(-50%);text-align:right;--i:5"><b>Timeline</b><span>Hier wird geschnitten: Clips anordnen, kürzen, verschieben</span></div>
+  <div class="ui-label" style="left:50%;top:620px;transform:translateX(-50%);text-align:center;width:520px;--i:6"><b>Seitenleiste</b><span>Wechsel zwischen den Arbeitsbereichen (z. B. Schnitt, Farbe, Export)</span></div>
+</div>
+
+<!--
+Notizen: Startfenster zeigen. Klick: Bereiche werden nacheinander markiert und erklärt.
 -->
 
 ---
