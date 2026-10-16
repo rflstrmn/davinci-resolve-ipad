@@ -184,18 +184,20 @@
 .ui-tour.small .shot { left: 232px; top: 188.5px; width: 560px; }
 .ui-tour .shot img { display: block; width: 100%; border-radius: 0; transition: border-radius 1s, box-shadow 1s; }
 .ui-tour.small .shot img { border-radius: 8px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); }
-.ui-tour .regions { position: absolute; inset: 0; }
 .ui-tour .region {
   position: absolute; box-sizing: border-box; border: 2px solid var(--dr-red); border-radius: 4px;
-  background: rgba(230, 75, 60, 0.12); opacity: 0;
+  background: rgba(230, 75, 60, 0.12);
 }
+.ui-step { position: absolute; inset: 0; pointer-events: none; --delay: 0s; }
+.ui-step.first { --delay: 1.1s; }
 .ui-arrows { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .ui-arrow { fill: none; stroke: var(--dr-red); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
 .ui-head { fill: none; stroke: var(--dr-red); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
 .ui-label { position: absolute; width: 200px; font-size: 0.8rem; line-height: 1.3; color: var(--dr-muted); opacity: 0; }
 .ui-label b { display: block; color: var(--dr-text); font-size: 1rem; margin-bottom: 0.15rem; }
 
-.ui-tour.small .region { animation: fade-from-0 0.4s ease both; animation-delay: calc(var(--start) + var(--i) * var(--step)); }
-.ui-tour.small .ui-arrow { animation: draw 0.4s ease-out both; animation-delay: calc(var(--start) + 0.2s + var(--i) * var(--step)); }
-.ui-tour.small .ui-head { animation: fade-from-0 0.15s both; animation-delay: calc(var(--start) + 0.55s + var(--i) * var(--step)); }
-.ui-tour.small .ui-label { animation: fade-from-0 0.4s ease both; animation-delay: calc(var(--start) + 0.55s + var(--i) * var(--step)); }
+.ui-step.slidev-vclick-target { transition: opacity 0.25s ease; }
+.ui-step:not(.slidev-vclick-hidden) .region { animation: fade-from-0 0.3s ease both; animation-delay: var(--delay); }
+.ui-step:not(.slidev-vclick-hidden) .ui-arrow { animation: draw 0.4s ease-out both; animation-delay: calc(var(--delay) + 0.15s); }
+.ui-step:not(.slidev-vclick-hidden) .ui-head { animation: fade-from-0 0.15s both; animation-delay: calc(var(--delay) + 0.5s); }
+.ui-step:not(.slidev-vclick-hidden) .ui-label { animation: fade-from-0 0.35s ease both; animation-delay: calc(var(--delay) + 0.5s); }
