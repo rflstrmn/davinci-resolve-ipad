@@ -43,7 +43,7 @@ Notizen: Begrüßung, kurz vorstellen, Ablauf des Workshops.
 
 </div>
 <div class="flex flex-col items-center gap-6">
-  <a href="https://www.blackmagicdesign.com/" target="_blank" rel="noopener">
+  <a href="https://www.blackmagicdesign.com/" target="_blank" rel="noopener" class="image-link">
     <img src="/images/blackmagic.jpg" class="screenshot" alt="Webseite von Blackmagic Design">
   </a>
   <LinkButton href="https://www.blackmagicdesign.com/">Webseite öffnen</LinkButton>
