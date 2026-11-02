@@ -225,3 +225,8 @@
 .xfade { position: relative; }
 .xfade-layer { position: absolute; inset: 0; transition: opacity 0.9s ease-in-out !important; }
 .xfade-layer .shot-slot { width: 100%; height: 100%; }
+.tl-split { display: flex; flex-direction: column; justify-content: center; gap: 2.5rem; }
+.tl-part { display: flex; flex-direction: column; gap: 0.6rem; transition: opacity 0.9s ease-in-out !important; }
+.tl-part .shot-slot { height: auto; }
+.tl-part .shot-slot img { width: 100%; }
+.tl-label { font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--dr-accent); text-align: center; }

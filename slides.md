@@ -260,12 +260,22 @@ Foto: public/images/pagebar-edit.png
 
 <div class="ce-shot xfade">
   <div v-click.hide="1" class="xfade-layer"><ShotSlot src="/images/edit-screen.jpg" /></div>
-  <div v-click="1" class="xfade-layer"><ShotSlot src="/images/edit-timeline.jpg" /></div>
+  <div v-click="[1, 2]" class="xfade-layer"><ShotSlot src="/images/edit-timeline.jpg" /></div>
+  <div class="xfade-layer tl-split">
+    <div v-click="2" class="tl-part">
+      <div class="tl-label">Bild</div>
+      <ShotSlot src="/images/edit-bild.jpg" />
+    </div>
+    <div v-click="3" class="tl-part">
+      <ShotSlot src="/images/edit-ton.jpg" />
+      <div class="tl-label">Ton</div>
+    </div>
+  </div>
 </div>
 
 <!--
-Notizen: Edit-Seite. Klick: Überblendung auf den Timeline-Ausschnitt.
-Screenshots: public/images/edit-screen.jpg, public/images/edit-timeline.jpg
+Notizen: Edit-Seite. Klick 1: Timeline-Ausschnitt. Klick 2: Bildspuren (Bild). Klick 3: Tonspuren (Ton).
+Screenshots: public/images/edit-screen.jpg, public/images/edit-timeline.jpg, edit-bild.jpg, edit-ton.jpg
 -->
 
 ---
