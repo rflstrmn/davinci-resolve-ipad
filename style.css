@@ -174,6 +174,7 @@
 .ov-cell:not(:has(li)) { display: flex; align-items: center; justify-content: center; }
 .ov-cell:not(:has(li)) .ov-price { margin: 0; }
 .ov-cell li { margin: 0.25rem 0; }
+.overview.ov-single { margin-top: 8rem; }
 .ov-cell.ov-pages { flex-direction: column; gap: 0.6rem; }
 .ov-pages .ov-price { font-size: 2rem; font-weight: 800; color: var(--dr-accent); }
 .slidev-layout .h1-sub { margin-top: -0.4rem; padding-left: calc(0.75rem + 6px); font-size: 1.5rem; color: var(--dr-muted); }
@@ -181,12 +182,14 @@
 /* Folie 5: Startfenster-Tour */
 .ui-tour { position: absolute; inset: 0; background: var(--dr-bg); --step: 0.7s; --start: 1.2s; }
 .ui-tour .shot {
-  position: absolute; left: 0; top: 26.5px; width: 1024px;
+  position: absolute; left: 102px; top: 165px; width: 820px;
   transition: left 1s cubic-bezier(.65,0,.35,1), top 1s cubic-bezier(.65,0,.35,1), width 1s cubic-bezier(.65,0,.35,1);
 }
 .ui-tour.small .shot { left: 232px; top: 188.5px; width: 560px; }
-.ui-tour .shot img { display: block; width: 100%; border-radius: 0; transition: border-radius 1s, box-shadow 1s; }
-.ui-tour.small .shot img { border-radius: 8px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); }
+.ui-tour .shot img { display: block; width: 100%; border-radius: 8px; transition: box-shadow 1s; }
+.ui-tour.small .shot img { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); }
+.ui-title { position: absolute; left: 3.5rem; top: 2.5rem; }
+.ui-title h1 { margin-bottom: 0.5rem; }
 .ui-tour .region {
   position: absolute; box-sizing: border-box; border: 2px solid var(--dr-red); border-radius: 4px;
   background: rgba(230, 75, 60, 0.12);

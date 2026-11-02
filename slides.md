@@ -304,7 +304,7 @@ Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-spur2.jpg, cut-spur1
 
 # Übersicht
 
-<div class="overview">
+<div class="overview ov-single">
   <div></div>
   <div class="ov-col"><mdi-tablet-ipad class="ov-icon" />iPad</div>
   <div class="ov-col"><mdi-desktop-tower-monitor class="ov-icon" />Mac / PC</div>
@@ -324,29 +324,23 @@ Notizen: Am iPad gibt es nur die Cut-Seite, am Mac/PC Cut und Edit.
 -->
 
 ---
-
-# Cut
-
-<p class="h1-sub">DaVinci Resolve am iPad</p>
-
-<!--
-Notizen: Ab hier: die Cut-Seite am iPad im Detail.
--->
-
----
 layout: full
 ---
 
-<!-- Startfenster am iPad: erst Vollbild. Klick 1 → Bild wird kleiner + erster Bereich,
+<!-- Cut – DaVinci Resolve am iPad: Titel + Startfenster. Klick 1 → Bild wird kleiner + erster Bereich,
      jeder weitere Klick → nächster Bereich (der vorherige verschwindet) -->
 <div class="ui-tour" :class="{ small: $clicks >= 1 }">
+  <div class="ui-title">
+    <h1>Cut</h1>
+    <p class="h1-sub">DaVinci Resolve am iPad</p>
+  </div>
   <div class="shot">
     <img src="/images/DVR_Start.png" alt="Startfenster von DaVinci Resolve am iPad">
   </div>
   <div v-click="[1, 2]" class="ui-step first">
     <div class="region" style="left:232.0px;top:188.5px;width:560.0px;height:19.0px"></div>
     <svg class="ui-arrows" viewBox="0 0 1024 768"><path class="ui-arrow" pathLength="1" d="M512 198 V154" /><path class="ui-head" d="M506 164 L512 154 L518 164" /></svg>
-    <div class="ui-label" style="left:50%;bottom:620px;transform:translateX(-50%);text-align:center;width:520px"><b>Menüleiste</b><span>Medien, Übergänge, Titel, Effekte, Keyframes – rechts Exportieren, Mixer, Inspektor</span></div>
+    <div class="ui-label" style="left:50%;bottom:620px;transform:translateX(-50%);text-align:center;width:480px"><b>Menüleiste</b><span>Medien, Übergänge, Titel, Effekte, Keyframes – rechts Exportieren, Mixer, Inspektor</span></div>
   </div>
   <div v-click="[2, 3]" class="ui-step">
     <div class="region" style="left:232.0px;top:207.5px;width:179.2px;height:206.6px"></div>
@@ -381,7 +375,7 @@ layout: full
 </div>
 
 <!--
-Notizen: Startfenster zeigen. Klick 1: Bild wird kleiner, Menüleiste. Danach pro Klick ein Bereich:
+Notizen: Ab hier die Cut-Seite am iPad im Detail. Startfenster zeigen. Klick 1: Bild wird kleiner, Menüleiste. Danach pro Klick ein Bereich:
 Media Pool, Viewer, Audiopegel, Werkzeug- & Transportleiste, Timeline, Seitenleiste.
 -->
 
