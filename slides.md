@@ -252,20 +252,20 @@ Foto: public/images/pagebar.png
 
 # Edit
 
-<ShotSlot src="/images/edit.png" class="ce-shot" />
+<ShotSlot src="/images/EDIT.jpg" class="ce-shot" />
 
 <!--
-Notizen: Edit-Seite. Screenshot: public/images/edit.png
+Notizen: Edit-Seite. Screenshot: public/images/EDIT.jpg
 -->
 
 ---
 
 # Cut
 
-<ShotSlot src="/images/cut.png" class="ce-shot" />
+<ShotSlot src="/images/CUT.jpg" class="ce-shot" />
 
 <!--
-Notizen: Cut-Seite. Screenshot: public/images/cut.png
+Notizen: Cut-Seite. Screenshot: public/images/CUT.jpg
 -->
 
 ---
