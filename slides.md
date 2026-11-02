@@ -277,13 +277,26 @@ Screenshots: public/images/edit-screen.jpg, public/images/edit-timeline.jpg, edi
 -->
 
 ---
+clicks: 2
+---
 
 # Cut
 
-<ShotSlot src="/images/cut-screen.jpg" class="ce-shot" />
+<div class="ce-shot xfade">
+  <div v-click.hide="1" class="xfade-layer"><ShotSlot src="/images/cut-screen.jpg" /></div>
+  <div v-click="1" class="xfade-layer tl-stage" :class="{ split: $clicks >= 2 }">
+    <div class="tl-box" style="aspect-ratio: 3060 / 1160">
+      <img class="tl-full" src="/images/cut-timeline.jpg" alt="">
+      <div class="tl-part up" style="top: 25.86%"><img src="/images/cut-part1.jpg" alt=""><span class="tl-tag" style="left: 77.06%; top: 80.39%">Bild</span></div>
+      <div class="tl-part " style="top: 61.03%"><img src="/images/cut-part2.jpg" alt=""><span class="tl-tag" style="left: 82.75%; top: 10.53%">Ton</span><span class="tl-tag" style="left: 88.17%; top: 61.05%">Bild</span></div>
+      <div class="tl-part down" style="top: 77.41%"><img src="/images/cut-part3.jpg" alt=""><span class="tl-tag" style="left: 94.18%; top: 49.33%">Ton</span></div>
+    </div>
+  </div>
+</div>
 
 <!--
-Notizen: Cut-Seite. Screenshot: public/images/cut-screen.jpg
+Notizen: Cut-Seite. Klick 1: Timeline. Klick 2: Bild- und Tonspur beider Clips werden getrennt.
+Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-part1–3.jpg
 -->
 
 ---
