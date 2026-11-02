@@ -137,6 +137,9 @@ Tippen auf den Screenshot öffnet ebenfalls die Webseite.
 + Magic Mask
 + Voice Isolation
 + Super Scale
++ Untertitel von Audio
++ Audio Transcription
++ Smart Reframe
 
 </div>
   </div>
@@ -224,6 +227,45 @@ Fokus auf die KI-Tools (DaVinci Neural Engine). Live in Resolve zeigen: Magic Ma
 
 <!--
 Notizen: Zusammenfassung – welche Version auf welchem Gerät, was kostet sie, was kann sie.
+-->
+
+---
+
+# DaVinci Resolve Schnittfenster
+
+<div class="ce-overview">
+  <div class="ce-words">
+    <span>Edit</span>
+    <span>Cut</span>
+  </div>
+  <div class="ce-pagebar">
+    <ShotSlot src="/images/pagebar.png" />
+  </div>
+</div>
+
+<!--
+Notizen: Zwei Schnittfenster – Edit und Cut. Gewechselt wird über die Page Bar unten.
+Foto: public/images/pagebar.png
+-->
+
+---
+
+# Edit
+
+<ShotSlot src="/images/edit.png" class="ce-shot" />
+
+<!--
+Notizen: Edit-Seite. Screenshot: public/images/edit.png
+-->
+
+---
+
+# Cut
+
+<ShotSlot src="/images/cut.png" class="ce-shot" />
+
+<!--
+Notizen: Cut-Seite. Screenshot: public/images/cut.png
 -->
 
 ---
