@@ -174,6 +174,9 @@
 .ov-cell:not(:has(li)) { display: flex; align-items: center; justify-content: center; }
 .ov-cell:not(:has(li)) .ov-price { margin: 0; }
 .ov-cell li { margin: 0.25rem 0; }
+.ov-cell.ov-pages { flex-direction: column; gap: 0.6rem; }
+.ov-pages .ov-price { font-size: 2rem; font-weight: 800; color: var(--dr-accent); }
+.slidev-layout .h1-sub { margin-top: -0.4rem; padding-left: calc(0.75rem + 6px); font-size: 1.5rem; color: var(--dr-muted); }
 
 /* Folie 5: Startfenster-Tour */
 .ui-tour { position: absolute; inset: 0; background: var(--dr-bg); --step: 0.7s; --start: 1.2s; }

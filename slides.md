@@ -301,6 +301,39 @@ Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-spur2.jpg, cut-spur1
 -->
 
 ---
+
+# Übersicht
+
+<div class="overview">
+  <div></div>
+  <div class="ov-col"><mdi-tablet-ipad class="ov-icon" />iPad</div>
+  <div class="ov-col"><mdi-desktop-tower-monitor class="ov-icon" />Mac / PC</div>
+
+  <div class="ov-row"><img src="/images/davinci-resolve-logo.png" class="ov-logo" alt=""><span>Schnittfenster</span></div>
+  <div class="ov-cell ov-pages">
+    <div class="ov-price">Cut</div>
+  </div>
+  <div class="ov-cell ov-pages">
+    <div class="ov-price">Cut</div>
+    <div class="ov-price">Edit</div>
+  </div>
+</div>
+
+<!--
+Notizen: Am iPad gibt es nur die Cut-Seite, am Mac/PC Cut und Edit.
+-->
+
+---
+
+# Cut
+
+<p class="h1-sub">DaVinci Resolve am iPad</p>
+
+<!--
+Notizen: Ab hier: die Cut-Seite am iPad im Detail.
+-->
+
+---
 layout: full
 ---
 
