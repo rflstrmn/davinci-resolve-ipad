@@ -287,19 +287,17 @@ clicks: 2
   <div v-click="1" class="xfade-layer tl-stage" :class="{ split: $clicks >= 2 }">
     <div class="tl-box tl-box-labeled" style="aspect-ratio: 3060 / 1160">
       <img class="tl-full" src="/images/cut-timeline.jpg" alt="">
-      <div class="tl-part shift" style="top: 25.86%; --dy: -18px"><img src="/images/cut-split1.jpg" alt=""><span class="tl-tag" style="left: 77.06%; top: 80.39%">Bild</span></div>
-      <div class="tl-part shift" style="top: 61.03%; --dy: -6px"><img src="/images/cut-split2.jpg" alt=""><span class="tl-tag" style="left: 82.75%; top: 50.00%">Ton</span></div>
-      <div class="tl-part shift" style="top: 64.48%; --dy: 6px"><img src="/images/cut-split3.jpg" alt=""><span class="tl-tag" style="left: 88.17%; top: 50.67%">Bild</span></div>
-      <div class="tl-part shift" style="top: 77.41%; --dy: 18px"><img src="/images/cut-split4.jpg" alt=""><span class="tl-tag" style="left: 94.18%; top: 49.33%">Ton</span></div>
-      <span class="tl-tag tl-track" style="top: calc(55.86% - 12px)">Spur 2</span>
-      <span class="tl-tag tl-track" style="top: calc(77.41% + 12px)">Spur 1</span>
+      <div class="tl-part shift" style="top: 25.86%; --dy: -10px"><img src="/images/cut-spur2.jpg" alt=""><span class="tl-tag" style="left: 77.06%; top: 73.21%">Bild</span><span class="tl-tag" style="left: 82.75%; top: 95.54%">Ton</span></div>
+      <div class="tl-part shift" style="top: 64.48%; --dy: 10px"><img src="/images/cut-spur1.jpg" alt=""><span class="tl-tag" style="left: 88.17%; top: 25.33%">Bild</span><span class="tl-tag" style="left: 94.18%; top: 74.67%">Ton</span></div>
+      <span class="tl-tag tl-track" style="top: calc(55.86% - 10px)">Spur 2</span>
+      <span class="tl-tag tl-track" style="top: calc(77.41% + 10px)">Spur 1</span>
     </div>
   </div>
 </div>
 
 <!--
-Notizen: Cut-Seite. Klick 1: Timeline. Klick 2: Bild- und Tonspur beider Clips werden getrennt.
-Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-split1–4.jpg
+Notizen: Cut-Seite. Klick 1: Timeline. Klick 2: Spur 2 und Spur 1 werden getrennt.
+Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-spur2.jpg, cut-spur1.jpg
 -->
 
 ---
