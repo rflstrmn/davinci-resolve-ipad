@@ -255,26 +255,24 @@ Foto: public/images/pagebar-edit.png
 -->
 
 ---
+clicks: 2
+---
 
 # Edit
 
 <div class="ce-shot xfade">
   <div v-click.hide="1" class="xfade-layer"><ShotSlot src="/images/edit-screen.jpg" /></div>
-  <div v-click="[1, 2]" class="xfade-layer"><ShotSlot src="/images/edit-timeline.jpg" /></div>
-  <div class="xfade-layer tl-split">
-    <div v-click="2" class="tl-part">
-      <div class="tl-label">Bild</div>
-      <ShotSlot src="/images/edit-bild.jpg" />
-    </div>
-    <div v-click="3" class="tl-part">
-      <ShotSlot src="/images/edit-ton.jpg" />
-      <div class="tl-label">Ton</div>
+  <div v-click="1" class="xfade-layer tl-stage" :class="{ split: $clicks >= 2 }">
+    <div class="tl-box">
+      <img class="tl-full" src="/images/edit-timeline.jpg" alt="">
+      <div class="tl-part tl-bild"><div class="tl-label">Bild</div><img src="/images/edit-bild.jpg" alt=""></div>
+      <div class="tl-part tl-ton"><img src="/images/edit-ton.jpg" alt=""><div class="tl-label">Ton</div></div>
     </div>
   </div>
 </div>
 
 <!--
-Notizen: Edit-Seite. Klick 1: Timeline-Ausschnitt. Klick 2: Bildspuren (Bild). Klick 3: Tonspuren (Ton).
+Notizen: Edit-Seite. Klick 1: Timeline-Ausschnitt. Klick 2: Timeline teilt sich in Bild (oben) und Ton (unten).
 Screenshots: public/images/edit-screen.jpg, public/images/edit-timeline.jpg, edit-bild.jpg, edit-ton.jpg
 -->
 
