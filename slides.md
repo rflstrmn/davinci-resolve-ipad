@@ -285,18 +285,21 @@ clicks: 2
 <div class="ce-shot xfade">
   <div v-click.hide="1" class="xfade-layer"><ShotSlot src="/images/cut-screen.jpg" /></div>
   <div v-click="1" class="xfade-layer tl-stage" :class="{ split: $clicks >= 2 }">
-    <div class="tl-box" style="aspect-ratio: 3060 / 1160">
+    <div class="tl-box tl-box-labeled" style="aspect-ratio: 3060 / 1160">
       <img class="tl-full" src="/images/cut-timeline.jpg" alt="">
-      <div class="tl-part up" style="top: 25.86%"><img src="/images/cut-part1.jpg" alt=""><span class="tl-tag" style="left: 77.06%; top: 80.39%">Bild</span></div>
-      <div class="tl-part " style="top: 61.03%"><img src="/images/cut-part2.jpg" alt=""><span class="tl-tag" style="left: 82.75%; top: 10.53%">Ton</span><span class="tl-tag" style="left: 88.17%; top: 61.05%">Bild</span></div>
-      <div class="tl-part down" style="top: 77.41%"><img src="/images/cut-part3.jpg" alt=""><span class="tl-tag" style="left: 94.18%; top: 49.33%">Ton</span></div>
+      <div class="tl-part shift" style="top: 25.86%; --dy: -18px"><img src="/images/cut-split1.jpg" alt=""><span class="tl-tag" style="left: 77.06%; top: 80.39%">Bild</span></div>
+      <div class="tl-part shift" style="top: 61.03%; --dy: -6px"><img src="/images/cut-split2.jpg" alt=""><span class="tl-tag" style="left: 82.75%; top: 50.00%">Ton</span></div>
+      <div class="tl-part shift" style="top: 64.48%; --dy: 6px"><img src="/images/cut-split3.jpg" alt=""><span class="tl-tag" style="left: 88.17%; top: 50.67%">Bild</span></div>
+      <div class="tl-part shift" style="top: 77.41%; --dy: 18px"><img src="/images/cut-split4.jpg" alt=""><span class="tl-tag" style="left: 94.18%; top: 49.33%">Ton</span></div>
+      <span class="tl-tag tl-track" style="top: calc(55.86% - 12px)">Spur 2</span>
+      <span class="tl-tag tl-track" style="top: calc(77.41% + 12px)">Spur 1</span>
     </div>
   </div>
 </div>
 
 <!--
 Notizen: Cut-Seite. Klick 1: Timeline. Klick 2: Bild- und Tonspur beider Clips werden getrennt.
-Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-part1–3.jpg
+Bilder: public/images/cut-screen.jpg, cut-timeline.jpg, cut-split1–4.jpg
 -->
 
 ---

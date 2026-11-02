@@ -250,5 +250,6 @@
   opacity: 0; transition: opacity 0.5s ease-out;
 }
 .split .tl-tag { opacity: 1; transition-delay: 0.8s; }
-.split .tl-part.up   { transform: translateY(-45px); }
-.split .tl-part.down { transform: translateY(45px); }
+.split .tl-part.shift { transform: translateY(var(--dy)); }
+.tl-box-labeled { width: calc(100% - 5.5rem); margin-left: auto; }
+.tl-track { right: calc(100% + 0.8rem); color: var(--dr-text); }
