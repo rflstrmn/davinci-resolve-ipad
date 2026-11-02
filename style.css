@@ -222,3 +222,6 @@
 .ce-pagebar .shot-slot { height: auto; }
 .ce-pagebar .shot-slot img { width: 100%; max-height: none; border-radius: 6px; }
 .ce-shot { height: 560px; margin-top: 1rem; }
+.xfade { position: relative; }
+.xfade-layer { position: absolute; inset: 0; transition: opacity 0.9s ease-in-out !important; }
+.xfade-layer .shot-slot { width: 100%; height: 100%; }

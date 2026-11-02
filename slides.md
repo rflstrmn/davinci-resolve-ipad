@@ -258,10 +258,14 @@ Foto: public/images/pagebar-edit.png
 
 # Edit
 
-<ShotSlot src="/images/edit-screen.jpg" class="ce-shot" />
+<div class="ce-shot xfade">
+  <div v-click.hide="1" class="xfade-layer"><ShotSlot src="/images/edit-screen.jpg" /></div>
+  <div v-click="1" class="xfade-layer"><ShotSlot src="/images/edit-timeline.jpg" /></div>
+</div>
 
 <!--
-Notizen: Edit-Seite. Screenshot: public/images/edit-screen.jpg
+Notizen: Edit-Seite. Klick: Überblendung auf den Timeline-Ausschnitt.
+Screenshots: public/images/edit-screen.jpg, public/images/edit-timeline.jpg
 -->
 
 ---
