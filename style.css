@@ -209,11 +209,16 @@
   width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem;
   border: 2px dashed var(--dr-border); border-radius: 8px; color: var(--dr-muted); font-size: 0.9rem; text-align: center;
 }
-.ce-overview { display: flex; flex-direction: column; height: 590px; }
+.ce-overview { position: relative; display: flex; flex-direction: column; height: 590px; }
 .ce-words {
-  flex: 1; display: flex; align-items: center; justify-content: center; gap: 6rem;
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 14rem;
   font-size: 7rem; font-weight: 800; line-height: 1; color: var(--dr-accent);
 }
+.ce-arrows { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.ce-line { fill: none; stroke: var(--dr-text); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 0.8s ease-out 0.4s forwards; }
+.ce-head { fill: var(--dr-text); opacity: 0; animation: fade-in 0.2s ease-out 1.1s forwards; }
+.ce-line.ce-l2 { animation-delay: 0.9s; }
+.ce-head.ce-l2 { animation-delay: 1.6s; }
 .ce-pagebar .shot-slot { height: auto; }
 .ce-pagebar .shot-slot img { width: 100%; max-height: none; border-radius: 6px; }
 .ce-shot { height: 560px; margin-top: 1rem; }

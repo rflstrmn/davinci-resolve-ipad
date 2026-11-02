@@ -235,9 +235,15 @@ Notizen: Zusammenfassung – welche Version auf welchem Gerät, was kostet sie, 
 
 <div class="ce-overview">
   <div class="ce-words">
-    <span>Edit</span>
-    <span>Cut</span>
+    <span class="ce-cut">Cut</span>
+    <span class="ce-edit">Edit</span>
   </div>
+  <svg class="ce-arrows" viewBox="0 0 912 590">
+    <path class="ce-line" pathLength="1" d="M240 350 C240 440, 273 450, 273 536" />
+    <polygon class="ce-head" points="264,534 282,534 273,549" />
+    <path class="ce-line ce-l2" pathLength="1" d="M663 350 C663 470, 396 430, 396 536" />
+    <polygon class="ce-head ce-l2" points="387,534 405,534 396,549" />
+  </svg>
   <div class="ce-pagebar">
     <ShotSlot src="/images/pagebar-edit.png" />
   </div>
