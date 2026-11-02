@@ -239,33 +239,33 @@ Notizen: Zusammenfassung – welche Version auf welchem Gerät, was kostet sie, 
     <span>Cut</span>
   </div>
   <div class="ce-pagebar">
-    <ShotSlot src="/images/pagebar.png" />
+    <ShotSlot src="/images/pagebar-edit.png" />
   </div>
 </div>
 
 <!--
 Notizen: Zwei Schnittfenster – Edit und Cut. Gewechselt wird über die Page Bar unten.
-Foto: public/images/pagebar.png
+Foto: public/images/pagebar-edit.png
 -->
 
 ---
 
 # Edit
 
-<ShotSlot src="/images/EDIT.jpg" class="ce-shot" />
+<ShotSlot src="/images/edit-screen.jpg" class="ce-shot" />
 
 <!--
-Notizen: Edit-Seite. Screenshot: public/images/EDIT.jpg
+Notizen: Edit-Seite. Screenshot: public/images/edit-screen.jpg
 -->
 
 ---
 
 # Cut
 
-<ShotSlot src="/images/CUT.jpg" class="ce-shot" />
+<ShotSlot src="/images/cut-screen.jpg" class="ce-shot" />
 
 <!--
-Notizen: Cut-Seite. Screenshot: public/images/CUT.jpg
+Notizen: Cut-Seite. Screenshot: public/images/cut-screen.jpg
 -->
 
 ---
